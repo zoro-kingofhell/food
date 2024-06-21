@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+</head>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+<style>
+        *
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar
+{
+  display: none
+}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+/* Navigation bar*/
+/* ---------------------------------------------------------------------------------------- */
+nav
+{
+  position: fixed;
+  height: 4.7rem;
+  width: 100%;
+  background-color:rgb(38, 38, 38);
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2;
+}
+.spc ul li
+{
+  list-style: none;
+  transition: 0.5s;
+  margin: 0 1rem;
+}
+a
+{
+  text-decoration: none;
+  color: whitesmoke;
+}
+ul li:hover
+{
+  color: goldenrod;
+}
+#ser-page
+{
+  color: goldenrod;
+}
+.spc ul
+{
+  display: flex;
+  align-items: center;
+}
+.spc
+{
+  margin: 0 1rem;
+}
+.logo
+{
+  margin: 0 2rem;
+  color: goldenrod;
+}
+.manu-icon
+{
+  display: none;
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+#btn1
+{
+  height: 2.6rem;
+  width: 8.3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: goldenrod;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media screen and (max-width:1100px){
+
+  nav .items
+    {
+        position: fixed;
+        z-index: 99;
+        top: 80px;
+        width: 100%;
+        left: 100%;
+        height: auto;
+        background-color: #252525;
+        display: inline-block;
+        padding: 10px 50px 0 50px;
+        text-align: center;
+        transition: left 0.3s ease;
+
+    }
+    nav .items.active
+    {
+        left: 0%;
+    }
+    nav .items li
+    {
+        line-height: 40px;
+        color: whitesmoke;
+        margin: 30px 0;
+    }
+    ul li:hover
+{
+  color: goldenrod;
+}
+    nav .items li 
+    {
+        font-size: 20px;
+    }
+  .manu-icon
+  {
+    display: block;
+    color: whitesmoke;
+  }
+    nav .manu-icon span.hide
+    {
+        display: none;
+    }
+}
+
+/*Header css*/
+/* ---------------------------------------------------------------------------------------- */
+
+header
+{
+  background:rgba(0,0,0,0.8)url(photos/background.png);
+  width: 100%;
+  height:32rem;
+  background-size:cover;
+  background-blend-mode: darken;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header p
+{
+    font-size: 5rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+/* -------------------------------------- */
+.alldata-about-food-zone
+{
+  height: auto;
+  width: auto;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+#data-about-chefs,#data-about-food-quality,#data-about-online-order,#data-about-service
+{
+  height:18rem;
+  width: 18rem;
+  border-radius: 1rem;
+  margin:0 1.5rem;
+  margin-top: 2rem;
+  box-shadow:2px 5px 10px 10px  rgba(0, 0, 0, 0.114);
+  transition: 0.5s;
+}
+.alldata-about-food-zone i
+{
+  font-size:3rem;
+  margin-top: 2rem;
+  color: rgb(255, 198, 55);
+  transition: 0.5s;
+}
+#chif-name,#foof-quality-name,#online-order-name,#service-name
+{
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+#chif-information,#food-quality-information,#online-order-information,#service-infprmation
+{
+  font-size: 1.1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 1.5rem;
+}
+#data-about-chefs:hover,#data-about-food-quality:hover,#data-about-online-order:hover,#data-about-service:hover
+{
+   background-color: rgb(255, 198, 55);
+   color: white;
+   
+   i
+   {
+    color: white;
+   }
+}
+/* ------------------------------------- */
+.last-part-of-site
+{
+  height: auto;
+  background-color: rgb(9, 9, 49);
+  margin-top: 8rem;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.last-web
+{
+  height: max-content;
+  width: max-content;
+  text-align: start;
+  margin: 1rem auto;
+}
+#last-part-web-data ul li
+{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.last-web #lst-p
+{
+  font-family: cursive;
+  color: rgb(225, 174, 45);
+  margin: 1rem 0;
+}
+.lst-idn
+{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 1rem 0;
+}
+.lst-opnt
+{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0.5rem 0;
+}
+.lstspc
+{
+  margin: 1rem 0;
+}
+#lst-input
+{
+  background-color: whitesmoke;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+#lst-input input
+{
+  background-color: transparent;
+  border: none;
+}
+#lst-input button
+{
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  background-color: rgb(225, 174, 45);
+  color: whitesmoke;
+}
+@media screen and (max-width:701px) {
+
+.H-data img
+{
+  height: 28rem;
+}
+#first-information
+{
+color: whitesmoke;
+font-family:cursive;
+font-size: 4rem;
+}
+#second-information
+{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+margin: 1rem 0;
+font-size: 0.8rem;
+}
+}
+
+@media  screen and (max-width:490px) {
+  header p
+{
+  font-size: 4rem;
+}
+}
+/* ------- */
+@media screen and (max-width:440px)
+{
+  #data-about-chefs,#data-about-food-quality,#data-about-online-order,#data-about-service
+{
+  height:18rem;
+  width: 15rem;
+  border-radius: 1rem;
+  margin:0 1.5rem;
+  margin-top: 2rem;
+  box-shadow:2px 5px 10px 10px  rgba(0, 0, 0, 0.114);
+  transition: 0.5s;
+  padding: 0 1rem;
+}
+.alldata-about-food-zone i
+{
+  font-size:2.5rem;
+  margin-top: 2rem;
+  color: rgb(255, 198, 55);
+  transition: 0.5s;
+}
+#chif-name,#foof-quality-name,#online-order-name,#service-name
+{
+  font-size: 1.3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+#chif-information,#food-quality-information,#online-order-information,#service-infprmation
+{
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 1.5rem;
+}
+}
+@media  screen and (max-width:435px) {
+  header p
+{
+  font-size: 3rem;
+}
+}
+</style>
+<body>
+    
+    <nav>
+        <div class="logo"><h1>food zone</h1></div>
+
+        <div class="spc">
+            <ul class="items">
+                <a href="index.html"><li>HOME</li></a>
+                <a href="food-about.html"><li>ABOUT US</li></a>
+                <a href="food-manu-page.html"><li>MENU</li></a>
+                <a href="food-contact-page.html"><li>CONTACT US</li></a>
+                <a href="food-ser-page.html"><li id="ser-page">SERVICE</li></a>
+                <li><button id="btn1">BOOK A TABLE</button></li>
+            </ul>
+        </div>
+
+        <div class="manu-icon"><span class="fas fa-bars"></span></div>
+    </nav>
+
+    <!-- ---------------------------------------------------------------- -->
+
+    <header>
+
+    <p>Service</p>
+
+    </header>
+
+  <!-- ---------------------------------------------------------------- -->
+
+  <div class="alldata-about-food-zone">
+
+    <div id="data-about-chefs" data-aos="zoom-in">
+        <div class="chef-space"  id="chif-logo"><i class="fa-solid fa-user-tie"></i></div>
+        <div class="chef-space"  id="chif-name">Master Chefs</div>
+        <div class="chef-space"  id="chif-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+    <div id="data-about-food-quality" data-aos="zoom-in">
+        <div class="food-quality-space" id="foof-quality-logo"><i class="fa-solid fa-utensils"></i></div>
+        <div class="food-quality-space" id="foof-quality-name">Quality Food</div>
+        <div class="food-quality-space" id="food-quality-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+    <div id="data-about-online-order" data-aos="zoom-in">
+        <div class="online-order-space" id="online-order-logo"><i class="fa-solid fa-cart-plus"></i></div>
+        <div class="online-order-space" id="online-order-name">Online Order</div>
+        <div class="online-order-space" id="online-order-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+    
+    <div id="data-about-service" data-aos="zoom-in">
+        <div class="service-space" id="service-logo"><i class="fa-solid fa-headset"></i></div>
+        <div class="service-space" id="service-name">24/7 Service</div>
+        <div class="service-space" id="service-infprmation">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+</div>
+
+<!-- ------------------------------------------------ -->
+
+<div class="alldata-about-food-zone">
+
+    <div id="data-about-chefs" data-aos="zoom-in">
+        <div class="chef-space"  id="chif-logo"><i class="fa-solid fa-user-tie"></i></div>
+        <div class="chef-space"  id="chif-name">Master Chefs</div>
+        <div class="chef-space"  id="chif-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+    <div id="data-about-food-quality" data-aos="zoom-in">
+        <div class="food-quality-space" id="foof-quality-logo"><i class="fa-solid fa-utensils"></i></div>
+        <div class="food-quality-space" id="foof-quality-name">Quality Food</div>
+        <div class="food-quality-space" id="food-quality-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+    <div id="data-about-online-order" data-aos="zoom-in">
+        <div class="online-order-space" id="online-order-logo"><i class="fa-solid fa-cart-plus"></i></div>
+        <div class="online-order-space" id="online-order-name">Online Order</div>
+        <div class="online-order-space" id="online-order-information">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+    
+    <div id="data-about-service" data-aos="zoom-in">
+        <div class="service-space" id="service-logo"><i class="fa-solid fa-headset"></i></div>
+        <div class="service-space" id="service-name">24/7 Service</div>
+        <div class="service-space" id="service-infprmation">ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis magnam eligendi numquam libero.</div>
+    </div>
+
+</div>
+
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <footer class="last-part-of-site">
+
+        <div class="last-web" id="last-part-web-data">
+            <p id="lst-p">Company----</p>
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Resevartion</li>
+                <li>Privacy Policy</li>
+                <li>Terrms & Condition</li>
+            </ul>
+        </div>
+        <div class="last-web">
+            <p id="lst-p">Contact----</p>
+            <p class="lst-idn">143 Street,Rajkot,Gondal.</p>
+            <p class="lst-idn">+9595453212</p>
+            <p class="lst-idn">zoro110@gmail.com</p>
+            <p></p>
+        </div>
+        <div class="last-web">
+            <p id="lst-p">Opening-time----</p>
+            <p class="lstspc">
+                <p class="lst-opnt">Monday-Saturday</p>
+                <p class="lst-opnt">09:00AM - 09:00PM</p>
+            </p>
+            <p class="lstspc">
+                <p class="lst-opnt">Sunday</p>
+                <p class="lst-opnt">10:00AM - 09:00PM</p>
+            </p>
+        </div>
+        <div class="last-web">
+            <p id="lst-p">sign-up----</p>
+            <div id="lst-input"><input type="text" placeholder="   sign-up"><button type="submit">Signup</button></div>
+        </div>
+
+    </footer>
+
+    <script src="food.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+      offset: 180,
+      duration: 1000,
+    });
+  </script>
+</body>
+</html>
